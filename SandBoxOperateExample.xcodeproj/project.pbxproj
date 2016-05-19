@@ -15,6 +15,7 @@
 		1FA677EE1CEDAFBE00BC9559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA677EC1CEDAFBE00BC9559 /* LaunchScreen.storyboard */; };
 		1FA677F91CEDAFBF00BC9559 /* SandBoxOperateExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA677F81CEDAFBF00BC9559 /* SandBoxOperateExampleTests.m */; };
 		1FA678041CEDAFBF00BC9559 /* SandBoxOperateExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA678031CEDAFBF00BC9559 /* SandBoxOperateExampleUITests.m */; };
+		1FA678131CEDAFEA00BC9559 /* SandBoxOperate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA678121CEDAFEA00BC9559 /* SandBoxOperate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		1FA677FF1CEDAFBF00BC9559 /* SandBoxOperateExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SandBoxOperateExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA678031CEDAFBF00BC9559 /* SandBoxOperateExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandBoxOperateExampleUITests.m; sourceTree = "<group>"; };
 		1FA678051CEDAFBF00BC9559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FA678111CEDAFEA00BC9559 /* SandBoxOperate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandBoxOperate.h; sourceTree = "<group>"; };
+		1FA678121CEDAFEA00BC9559 /* SandBoxOperate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandBoxOperate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 		1FA677DD1CEDAFBE00BC9559 /* SandBoxOperateExample */ = {
 			isa = PBXGroup;
 			children = (
+				1FA678111CEDAFEA00BC9559 /* SandBoxOperate.h */,
+				1FA678121CEDAFEA00BC9559 /* SandBoxOperate.m */,
 				1FA677E11CEDAFBE00BC9559 /* AppDelegate.h */,
 				1FA677E21CEDAFBE00BC9559 /* AppDelegate.m */,
 				1FA677E41CEDAFBE00BC9559 /* ViewController.h */,
@@ -207,6 +212,7 @@
 				TargetAttributes = {
 					1FA677DA1CEDAFBE00BC9559 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = DJMBC5TQ49;
 					};
 					1FA677F31CEDAFBF00BC9559 = {
 						CreatedOnToolsVersion = 7.1;
@@ -272,6 +278,7 @@
 			files = (
 				1FA677E61CEDAFBE00BC9559 /* ViewController.m in Sources */,
 				1FA677E31CEDAFBE00BC9559 /* AppDelegate.m in Sources */,
+				1FA678131CEDAFEA00BC9559 /* SandBoxOperate.m in Sources */,
 				1FA677E01CEDAFBE00BC9559 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,7 +418,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SandBoxOperateExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = msd.SandBoxOperateExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,7 +431,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SandBoxOperateExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = msd.SandBoxOperateExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-Lq-TS0">
+                                <rect key="frame" x="245" y="50" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="o91-Sx-eHX"/>
+                                    <constraint firstAttribute="width" constant="110" id="q4o-47-UTR"/>
+                                </constraints>
+                                <state key="normal" title="储存照片"/>
+                                <connections>
+                                    <action selector="savePhoto" destination="BYZ-38-t0r" eventType="touchUpInside" id="uD3-rH-cCJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEc-7s-poA">
+                                <rect key="frame" x="246" y="107" width="109" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gz1-l3-95d"/>
+                                    <constraint firstAttribute="width" constant="109" id="k4o-rh-EJw"/>
+                                </constraints>
+                                <state key="normal" title="读取照片"/>
+                                <connections>
+                                    <action selector="readPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lMe-Wf-5qP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RZi-rX-ShJ">
+                                <rect key="frame" x="206" y="259" width="189" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="AK4-fJ-3af"/>
+                                    <constraint firstAttribute="height" constant="247" id="Mfz-TI-Dau"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="存储成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybf-Jg-Lvz">
+                                <rect key="frame" x="270" y="514" width="60" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.1960784314" green="0.46274509800000002" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcD-4p-9J5">
+                                <rect key="frame" x="263" y="158" width="75" height="30"/>
+                                <state key="normal" title="文件夹大小"/>
+                                <connections>
+                                    <action selector="calauateFoladerSize" destination="BYZ-38-t0r" eventType="touchUpInside" id="VM8-89-UJz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVS-sx-hlU">
+                                <rect key="frame" x="270" y="204" width="60" height="30"/>
+                                <state key="normal" title="清除缓存"/>
+                                <connections>
+                                    <action selector="cleanCaches" destination="BYZ-38-t0r" eventType="touchUpInside" id="yWr-zH-faZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kcD-4p-9J5" firstAttribute="top" secondItem="RZi-rX-ShJ" secondAttribute="top" id="14J-Pp-Ekf"/>
+                            <constraint firstItem="zEc-7s-poA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1gj-hB-grx"/>
+                            <constraint firstItem="kcD-4p-9J5" firstAttribute="top" secondItem="zEc-7s-poA" secondAttribute="bottom" constant="21" id="4Ii-0x-U9E"/>
+                            <constraint firstItem="RZi-rX-ShJ" firstAttribute="top" secondItem="kcD-4p-9J5" secondAttribute="bottom" constant="19" id="5aZ-ae-4ae"/>
+                            <constraint firstItem="kcD-4p-9J5" firstAttribute="leading" secondItem="RZi-rX-ShJ" secondAttribute="trailing" id="8ho-SH-76h"/>
+                            <constraint firstItem="Ybf-Jg-Lvz" firstAttribute="top" secondItem="RZi-rX-ShJ" secondAttribute="bottom" constant="8" id="9sU-rn-7dZ"/>
+                            <constraint firstItem="RZi-rX-ShJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AI4-Ej-mkp"/>
+                            <constraint firstItem="Ybf-Jg-Lvz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IkH-6h-GSn"/>
+                            <constraint firstItem="zEc-7s-poA" firstAttribute="top" secondItem="dSG-Lq-TS0" secondAttribute="bottom" constant="27" id="OhT-sE-cgJ"/>
+                            <constraint firstItem="dSG-Lq-TS0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="PSI-g9-e8O"/>
+                            <constraint firstItem="RZi-rX-ShJ" firstAttribute="top" secondItem="BVS-sx-hlU" secondAttribute="bottom" constant="25" id="UIy-QA-6vy"/>
+                            <constraint firstItem="Ybf-Jg-Lvz" firstAttribute="leading" secondItem="dSG-Lq-TS0" secondAttribute="trailing" constant="25" id="Yuq-AS-ODB"/>
+                            <constraint firstItem="kcD-4p-9J5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jzK-od-yCL"/>
+                            <constraint firstItem="BVS-sx-hlU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oqM-Mh-vje"/>
+                            <constraint firstItem="dSG-Lq-TS0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="phb-qb-zl1"/>
+                            <constraint firstItem="BVS-sx-hlU" firstAttribute="top" secondItem="kcD-4p-9J5" secondAttribute="bottom" constant="16" id="qz9-B8-KMd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="14J-Pp-Ekf"/>
+                                <exclude reference="8ho-SH-76h"/>
+                                <exclude reference="5aZ-ae-4ae"/>
+                                <exclude reference="Yuq-AS-ODB"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imgView" destination="RZi-rX-ShJ" id="KS0-He-ZKu"/>
+                        <outlet property="successLabel" destination="Ybf-Jg-Lvz" id="PBe-gi-ASw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="180" y="410"/>
         </scene>
     </scenes>
 </document>
